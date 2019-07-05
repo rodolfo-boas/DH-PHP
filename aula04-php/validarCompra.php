@@ -1,11 +1,11 @@
 <?php
-  $nomeCompleto = $_REQUEST["nomeCompleto"];
-  $cpf = $_REQUEST["cpf"];
-  $numeroCartao = $_REQUEST["numeroCartao"];
-  $validade = $_REQUEST["validade"];
-  $cvv = $_REQUEST["cvv"];
-  $nomeCurso = $_REQUEST["nomeCurso"];
-  $precoCurso = $_REQUEST["precoCurso"];
+  $nomeCurso    = $_POST["nomeCurso"];
+  $preco        = $_POST["preco"];
+  $nomeCompleto = $_POST["nomeCompleto"];
+  $cpf          = $_POST["cpf"];
+  $nroCartao    = $_POST["nroCartao"];
+  $validade     = $_POST["validade"];
+  $cvv          = $_POST["cvv"];
 ?>
 
 <!DOCTYPE html>
@@ -24,9 +24,6 @@
           <div class="panel-heading">Compra Realizada com sucesso!</div>
           <div class="panel-body">
             <ul class="list-group">
-              <li class="list-group-item"><strong>Nome Curso:</strong><?php echo $nomeCurso; ?></li>
-              <li class="list-group-item"><strong>Preço: R$</strong><?php echo $precoCurso; ?></li>
-              <li class="list-group-item"><strong>Nome Completo:</strong><?php echo $nomeCompleto; ?></li>
             </ul>
             <div class="center">
               <a href="index.php">Voltar para a home</a>

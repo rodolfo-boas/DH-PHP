@@ -15,7 +15,7 @@
   <!-- variaveis de conteudo -->
   <?php
     $cursos = [
-      "Full Stack" => ["full.jpeg", "Curso de desenvolvimento web", 41.99, "full-stack"],
+      "Full Stack" => ["full.jpeg", "Curso de desenvolvimento web", 41.99, "full stack"],
       "Marketing Digital" => ["marketing.jpg", "Curso de marketing", 51.99, "marketing"],
       "User Experience" => ["ux.png", "Curso de Experiência de Usuário", 71.99, "ux"],
       "Mobile Android" => ["android.png", "Curso de desenvolvimento android", 0.99, "android"]
@@ -79,9 +79,7 @@
                 <h3><?php echo $nome; ?></h3>
                 <p><?php echo $infos[1]; ?></p>
                 <p><strong><?php echo $infos[2]; ?></strong></p>
-                <a href="#" class="btn btn-primary" role="button" 
-                    data-toggle="modal" data-target="<?php echo "#$infos[3]"; ?>">Comprar
-                </a>
+                <a href="#" class="btn btn-primary" role="button">Comprar</a>
               </div>
             </div>
           </div>
@@ -101,41 +99,39 @@
                                 <h4>Valor: R$
                                     <?php echo $infos[2] ?>
                                 </h4>
-                      <form class="" action="validarCompra.php" method="POST">
-                          <input type="hidden" name="nomeCurso" value="<?php echo $nome; ?>">
-                          <input type="hidden" name="precoCurso" value="<?php echo $infos[2]; ?>">
-                          <div class="input-group col-md-5">
-                              <label for="labelNome">Nome Completo</label>
-                              <input id="labelNome" type="text" name="nomeCompleto" class="form-control"
-                                  placeholder="Digite Aqui...">
-                          </div>
+                                <form class="" action="" method="">
+                                    <div class="input-group col-md-5">
+                                        <label for="labelNome">Nome Completo</label>
+                                        <input id="labelNome" type="text" class="form-control"
+                                            placeholder="Digite Aqui...">
+                                    </div>
 
-                          <div class="input-group col-md-5">
-                              <label for="labelCpf">CPF</label>
-                              <input id="labelCpf" type="number" name="cpf" class="form-control"
-                                  placeholder="Digite Aqui...">
-                          </div>
+                                    <div class="input-group col-md-5">
+                                        <label for="labelCpf">CPF</label>
+                                        <input id="labelCpf" type="number" class="form-control"
+                                            placeholder="Digite Aqui...">
+                                    </div>
 
-                          <div class="input-group col-md-5">
-                              <label for="labelNroCartao">Número do Cartão</label>
-                              <input id="labelNroCartao" type="number" name="numeroCartao" class="form-control"
-                                  placeholder="Digite Aqui...">
-                          </div>
+                                    <div class="input-group col-md-5">
+                                        <label for="labelNroCartao">Número do Cartão</label>
+                                        <input id="labelNroCartao" type="number" class="form-control"
+                                            placeholder="Digite Aqui...">
+                                    </div>
 
-                          <div class="input-group col-md-5">
-                              <label for="labelValidade">Validade</label>
-                              <input id="labelValidade" type="month" name="validade" class="form-control"
-                                  placeholder="Digite Aqui...">
-                          </div>
+                                    <div class="input-group col-md-5">
+                                        <label for="labelValidade">Validade</label>
+                                        <input id="labelValidade" type="month" class="form-control"
+                                            placeholder="Digite Aqui...">
+                                    </div>
 
-                          <div class="input-group col-md-5">
-                              <label for="labelCvv">CVV</label>
-                              <input id="labelCvv" type="number" name="cvv" class="form-control"
-                                  placeholder="Digite Aqui...">
-                          </div>
+                                    <div class="input-group col-md-5">
+                                        <label for="labelCvv">CVV</label>
+                                        <input id="labelCvv" type="number" class="form-control"
+                                            placeholder="Digite Aqui...">
+                                    </div>
 
-                          <button type="submit" name="button" class="btn btn-info">Comprar</button>
-                      </form>
+                                    <button type="submit" name="button" class="btn btn-info">Comprar</button>
+                                </form>
                             </div>
                             <div class="modal-footer">
                                 <p align="center">Copyright &copy; Cursos 2019</p>
@@ -144,7 +140,7 @@
                     </div>
                 </div>
               <?php endforeach; ?>
-	          <!-- fim área da compra -->
+	  <!-- fim área da compra -->
       	</div>
     </div>
   </main>
