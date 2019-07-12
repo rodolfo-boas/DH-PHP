@@ -1,5 +1,37 @@
+<?php
+  require "utils/funcoesLogin.php";
+  include "inc/head.php";
+
+  if($_REQUEST){
+    $nome = $_REQUEST['nome'];
+    $email = $_REQUEST['email'];
+    $senha = $_REQUEST['senha'];
+    $confirmarSenha = $_REQUEST['confirmarSenha'];
+  
+
+    if($senha != $confirmarSenha) {
+      $erro = "Senha incompatíveis! Revise por favor...";
+    } else {
+      $novoUsuario = [
+        "nome" => $nome,
+        "email" => $email,
+        "senha" => $senha
+      ];
+      $cadastrou = cadastrarUsuario($novoUsuario);
+    }
+  }
+?>
   <div class="page-center">
     <h1>Cadastre-se</h1>
+    <?php if(isset($erro)) : ?>
+      <div class="alert alert-danger" role="alert">
+        <?= $erro; ?>
+      </div>
+      <?php elseif (isset($cadastrou)) : ?>
+       <div class="alert alert-sucess" role="alert">
+        <span>Usuário cadastrado com sucesso</span>
+       </div>
+    <?php endif; ?> 
     <form action="cadastro.php" method="post" class="col-md-7">
       <div class="col-md-12">
         <label for="exampleInputNome">Nome</label>
@@ -23,3 +55,4 @@
       </div>
     </form>
   </div>
+

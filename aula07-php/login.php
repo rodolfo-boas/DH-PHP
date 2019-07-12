@@ -1,6 +1,23 @@
+<?php
+  require "utils/funcoesLogin.php";
+  include "inc/head.php";
+
+  if($_REQUEST) {
+    $email = $_REQUEST['email'];
+    $senha = $_REQUEST['senha'];
+    $estaLogado = logarUsuario($email, $senha);
+  }
+?>
 
  <div class="page-center">
    <h1>Login</h1>
+   <?php if(isset($estaLogado) && !$estaLogado) : ?>
+    <div class="alert alert-danger" role="alert">
+      <span>Email e senha incompatíveis</span>
+    </div>
+    <?php elseif (isset($estaLogado) && $estaLogado) : ?>
+      <?php header("Location: index.php");?>
+    <?php endif; ?>
    <form action="login.php" method="post" class="col-md-7">
      <div class="col-md-12">
        <label for="exampleInputEmail1">Email</label>
@@ -16,3 +33,4 @@
      </div>
    </form>
  </div>
+ <?php include "inc/footer.php"; ?>
