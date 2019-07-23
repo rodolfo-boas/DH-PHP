@@ -13,7 +13,7 @@
 
         public function conectar($penDrive){
             $this->usb = $penDrive;
-            echo "O pendrive $this->usb foi conectado";
+            echo "O pendrive foi conectado";
         }
 
         public function aumentarVolume($valorVolume){
@@ -33,6 +33,37 @@
             } else if ($this->ligado){
                 $this->volume = 0;
                 echo "Você está no volume mínimo que é $this->volume";
+            }
+        }
+
+        public function reproduzir(){
+            if($this->ligado && $this->usb){
+                if($this->numeroDeFaixa < count($this->usb->listaDeMusicas)){
+                    echo "Reproduzindo musica: " . $this->usb->listaDeMusicas[$this->numeroDeFaixa];
+                    echo "<br>";
+                } 
+            }
+        }
+
+        public function avancarFaixa(){
+            if($this->ligado && $this->usb){
+                if($this->numeroDeFaixa < count($this->usb->listaDeMusicas) - 1){
+                    $this->numeroDeFaixa ++;
+                } else {
+                    echo "Você chegou na ultima musica";
+                    echo "<br>";
+                }
+            }
+        }
+
+        public function voltarFaixa(){
+            if($this->ligado && $this->usb){
+                if($this->numeroDeFaixa > 0){
+                    $this->numeroDeFaixa -- ;
+                } else {
+                    echo "Você chegou na primeira musica";
+                    echo "<br>";
+                }
             }
         }
     }

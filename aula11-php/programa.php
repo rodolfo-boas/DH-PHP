@@ -30,7 +30,7 @@
     
     $aparelhoDeSom->ligar();
     echo "<br>";
-    $aparelhoDeSom->conectar("Cruzer Blade");
+    $aparelhoDeSom->conectar($penDrive);
     echo "<br>";
     $aparelhoDeSom->aumentarVolume(10);
     echo "<br>";
@@ -43,4 +43,29 @@
     $aparelhoDeSom->diminuirVolume(10);
     echo "<br>";
     $aparelhoDeSom->diminuirVolume(10);
+    echo "<hr>";
+    $aparelhoDeSom->reproduzir();
+    $aparelhoDeSom->avancarFaixa();
+    $aparelhoDeSom->reproduzir();
+    $aparelhoDeSom->avancarFaixa();
+    $aparelhoDeSom->reproduzir();
+    $aparelhoDeSom->avancarFaixa();
+    $aparelhoDeSom->reproduzir();
+    $aparelhoDeSom->avancarFaixa();
+    $aparelhoDeSom->reproduzir();
+    $aparelhoDeSom->avancarFaixa();
+    $aparelhoDeSom->reproduzir();
+    $aparelhoDeSom->voltarFaixa();
+    $aparelhoDeSom->reproduzir();
+    $aparelhoDeSom->voltarFaixa();
+    $aparelhoDeSom->reproduzir();
+    $aparelhoDeSom->voltarFaixa();
+    $aparelhoDeSom->reproduzir();
+    $aparelhoDeSom->voltarFaixa();
+    $aparelhoDeSom->reproduzir();
+    $aparelhoDeSom->voltarFaixa();
+    $aparelhoDeSom->reproduzir();
+    $aparelhoDeSom->desligar();
+    echo "<hr>";
+
 ?>
